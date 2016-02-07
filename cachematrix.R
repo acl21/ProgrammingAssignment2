@@ -1,12 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
 
 ## Makes the Cache Matrix and returns a list with functions 
 
 makeCacheMatrix <- function(x = matrix()) {
   i<-NULL
   set<-function(y){
-    x<<-y
+    if(!identical(x,y)) x<<-y  #Avoiding Unnecessary Assignment
     i<<-NULL
   }
   get <- function() x
